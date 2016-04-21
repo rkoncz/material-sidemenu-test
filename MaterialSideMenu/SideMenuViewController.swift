@@ -134,18 +134,15 @@ extension SideMenuViewController: UITableViewDelegate {
 
 		switch item.text {
 		case "Main screen":
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let navigationController = storyboard.instantiateViewControllerWithIdentifier("MainViewController") as! NavigationController
+            let navigationController = self.storyboard?.instantiateViewControllerWithIdentifier("MainViewController") as! NavigationController
             sideNavigationController?.transitionFromRootViewController(navigationController)
             sideNavigationController?.closeLeftView()
 		case "Menu point 1":
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let navigationController = storyboard.instantiateViewControllerWithIdentifier("Menu1NavigationController") as! NavigationController
+            let navigationController = self.storyboard?.instantiateViewControllerWithIdentifier("Menu1NavigationController") as! NavigationController
             sideNavigationController?.transitionFromRootViewController(navigationController)
             sideNavigationController?.closeLeftView()
         case "Menu point 2":
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let navigationController = storyboard.instantiateViewControllerWithIdentifier("Menu2NavigationController") as! NavigationController
+            let navigationController = self.storyboard?.instantiateViewControllerWithIdentifier("Menu2NavigationController") as! NavigationController
             sideNavigationController?.transitionFromRootViewController(navigationController)
             sideNavigationController?.closeLeftView()
 		default: break
